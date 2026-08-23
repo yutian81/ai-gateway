@@ -9,7 +9,14 @@ keep_vars = true
 binding = "KV"
 
 # Admin credentials (set these in Cloudflare Dashboard > Workers > Variables)
-# [vars]
-# ADMIN_USERNAME = "admin"
+[vars]
+ADMIN_USERNAME = "dazzlej"
 # ADMIN_PASSWORD = "your-password"
-# OPENCODE_MIRRORS_URL = "https://opencode.ai.cmliussss.net/zen/v1\nhttps://opencode.fastly.cmliussss.net/zen/v1\nhttps://opencode.gcore.cmliussss.net/zen/v1"
+
+# Option A: multiline string (if your app expects one string with newlines)
+# OPENCODE_MIRRORS_URL = """https://opencode.ai.cmliussss.net/zen/v1
+# https://opencode.fastly.cmliussss.net/zen/v1
+# https://opencode.gcore.cmliussss.net/zen/v1"""
+
+# Option B: array of URLs (recommended)
+# OPENCODE_MIRRORS_URL = ["https://opencode.ai.cmliussss.net/zen/v1", "https://opencode.fastly.cmliussss.net/zen/v1", "https://opencode.gcore.cmliussss.net/zen/v1"]
